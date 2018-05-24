@@ -1,0 +1,28 @@
+{
+  "name": "fetch-interceptors",
+  "version": "0.1.1",
+  "description": "",
+  "main": "dist/fetch-interceptors.cjs.js",
+  "scripts": {
+    "test": "npm run build && ava",
+    "build": "bili",
+    "prettify": "prettier src/**/* --write",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "author": "Tyrone Tudehope",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnynotsolucky/fetch-interceptors.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "bili": "^3.1.2",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.12.1"
+  },
+  "pre-commit": [
+    "prettify",
+    "test"
+  ]
+}
